@@ -21,11 +21,15 @@ function App() {
   ]
 
   return (
+    // rendering elements if have items wuth condition rendering with ternary operator
     <>
       <h1>React App</h1>
-      <List type = {Fruits} title = {"List of Fruits"}/>
-      <List type = {Vegetables} title = {"Trending Vegetables in Africa"}/>
+      {/* {Fruits.length > 0 ? <List type = {Fruits} title = {"List of Fruits"}/>: 'nothing to display'} */}
+      
+      {Vegetables.length > 0 ? <List type = {Vegetables} title = {"Trending Vegetables in Africa"}/> : 'nothing to display'}
 
+      {/* <!-- we can also use short curcuit operator to render elements --> */}
+      {Fruits.length > 0 && <List type = {Fruits} title = {"List of Fruits"}/>}
     </>
   )
 }

@@ -41,4 +41,12 @@ const List = (props: ListProps) => {
   )
 }
 
+// we can add placeholders to the components to display when there are no items to display
+// like when title is empty or type is empty
+
+List.defaultProps = {
+    title: 'List of Items',
+    type: []
+}
+
 export default List
