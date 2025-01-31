@@ -1,4 +1,6 @@
 import './App.css'
+import Button from './Button'
+import Counter from './Counter'
 import List from './List'
 
 function App() {
@@ -30,6 +32,9 @@ function App() {
 
       {/* <!-- we can also use short curcuit operator to render elements --> */}
       {Fruits.length > 0 && <List type = {Fruits} title = {"List of Fruits"}/>}
+      
+      <Button />
+      <Counter />
     </>
   )
 }
